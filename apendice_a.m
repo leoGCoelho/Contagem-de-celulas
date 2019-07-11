@@ -110,11 +110,11 @@ OrigImage_Q2 = imcrop(binaryImage, [(nrows - dimension), (nrows - dimension), di
 OrigImage_Q3 = imcrop(binaryImage, [1, (nrows - dimension), dimension , dimension]) ;
 %figure, imshow(OrigImage_Q3), title(’Quadrante 4’) ;
 
-figure ;
-subplot(2, 2, 1); imshow(OrigImage_Q0); title('Quadrante 1') ;
-subplot(2, 2, 2); imshow(OrigImage_Q1); title('Quadrante 2') ;
-subplot(2, 2, 4); imshow(OrigImage_Q2); title('Quadrante 3') ;
-subplot(2, 2, 3); imshow(OrigImage_Q3); title('Quadrante 4') ;
+%figure ;
+%subplot(2, 2, 1); imshow(OrigImage_Q0); title('Quadrante 1') ;
+%subplot(2, 2, 2); imshow(OrigImage_Q1); title('Quadrante 2') ;
+%subplot(2, 2, 4); imshow(OrigImage_Q2); title('Quadrante 3') ;
+%subplot(2, 2, 3); imshow(OrigImage_Q3); title('Quadrante 4') ;
 
 
 %% Remove pequenos objetos para descartar objetos indesejados
@@ -234,7 +234,7 @@ imshow(Segout_q1); title(n_celulas_str_q1) ;
 
 
 hold on ;
-for n_celulas_q2 = 1:numel(s_q12)
+for n_celulas_q2 = 1:numel(s_q2)
   e_q2 = s_q1(n_celulas_q2).Extrema ;
 end
 hold off;
