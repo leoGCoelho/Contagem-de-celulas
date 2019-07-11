@@ -4,8 +4,8 @@ close all;
 workspace;
 fontSize = 16;
 
-originalImage = imread('img1_q1.jpg'); %Leitura da imagem
-img_exemplo = imread('img_exemplo.png'); %imagem exemplo
+originalImage = imread('celula.jpg'); %Leitura da imagem
+img_exemplo = imread('celulaesp.jpg'); %imagem exemplo
 
 figure , imshow(img_exemplo , []);
 title('Imagem Exemplo', 'FontSize', fontSize);
@@ -58,7 +58,7 @@ R=imref2d(size(originalImage),[0 size(originalImage,2)],[0 size(originalImage,1)
 imgTransformed=imwarp(originalImage,TFORM,'OutputView',R);
 
 imgTransformed = imcrop(imgTransformed,[0, 0, size(originalImage,1), size(originalImage,1)]);
-figure, imshow(imgTransformed);
+%figure, imshow(imgTransformed);
 
 ImageResized = imresize(imgTransformed,[655 655]);
 
@@ -116,7 +116,7 @@ L1_q0 = bwlabel(BWsdil_q0);
 
 figure, imshow(L1_q0); title('Edge');
 
-s_q0 = regionprops(L1_q0, 'extrema');
+s_q0 = regionprops(L1_q0, 'Extrema');
 
 hold on;
 for n_celulas_q0 = 1:numel(s_q0)
